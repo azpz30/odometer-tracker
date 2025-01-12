@@ -8,7 +8,7 @@ router.post('/trips/new', auth, async (req, res) => {
         fuelCharge: req.body.fuelCharge,
         distance: 0,
         owner: req.user._id,
-        stops: [] 
+        currentOdometer: req.body.odometerReading,
     })
 
     try {
@@ -81,3 +81,5 @@ router.patch('/trip/:id', auth, async (req, res) => {
         res.status(400).send(e)
     }
 })
+
+module.exports = router

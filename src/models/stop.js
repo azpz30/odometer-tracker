@@ -5,6 +5,11 @@ const Stop = mongoose.model('Stop', {
         type: mongoose.Schema.Types.Decimal128,
         required: true,
     },
+    tripOf: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'Trip'
+    },
     owner: [{
         type: mongoose.Schema.Types.ObjectId,
         required: true,

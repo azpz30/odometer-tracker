@@ -14,10 +14,10 @@ const tripSchema = new mongoose.Schema({
         required: true,
         ref: 'User',
     },
-    stops: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Stop',
-    }]
+    currentOdometer: {
+        type: mongoose.Schema.Types.BigInt,
+        required: true,
+    }
 });
 
 const Trip = mongoose.model('Trip', tripSchema);
