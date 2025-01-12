@@ -1,0 +1,28 @@
+{
+  "name": "odometer-tracker",
+  "version": "1.0.0",
+  "description": "Track odometer reading when there are multiple drivers of the same car",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azpz30/odometer-tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/azpz30/odometer-tracker/issues"
+  },
+  "homepage": "https://github.com/azpz30/odometer-tracker#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.12.0",
+    "mongoose": "^8.9.3",
+    "validator": "^13.12.0"
+  }
+}
