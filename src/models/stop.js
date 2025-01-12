@@ -5,11 +5,11 @@ const Stop = mongoose.model('Stop', {
         type: mongoose.Schema.Types.Decimal128,
         required: true,
     },
-    owner: {
+    owner: [{
         type: mongoose.Schema.Types.ObjectId,
         required: true,
         ref: 'User'
-    }
+    }]
 })
 
 module.exports = Stop

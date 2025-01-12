@@ -3,6 +3,7 @@ const validator = require('validator')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const Trip = require('./trip')
+const authToken = 'biriyani'
 
 const userSchema = new mongoose.Schema({
     name: {
@@ -59,7 +60,7 @@ userSchema.methods.toJSON = function () {
 
 userSchema.methods.generateAuthToken = async function () {
     const user = this
-    const token = jwt.sign({ _id: user._id.toString() }, 'thisismynewcourse')
+    const token = jwt.sign({ _id: user._id.toString() }, authToken)
 
     user.tokens = user.tokens.concat({ token })
     await user.save()
